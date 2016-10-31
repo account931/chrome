@@ -9,7 +9,7 @@
 </head>
 <body>
 </br>
-Sp Key <input type="text" is="key"/>
+Sp Key<input type="text" is="key"/>
 List  number<input type="text" is="list"/></br></br>
 <input type="button" value="Get Content by Json" id ="butt" onclick="getJson()" /></br>
 
@@ -21,12 +21,12 @@ function getJson (){
                          $.getJSON('https://spreadsheets.google.com/feeds/list/1yMCXjYbUCZ10J38pBYSB6KQdWyF-2Hfg-YZAdZPJOPM/3/public/values?alt=json',function(respp){
 
                           //alert(JSON.stringify(respp, null, 4));  alert(respp.response[0].first_name); // alerting  friends;
-  var lengthR = Object.keys(respp.feed).length;  alert("Number entries  => "+lengthR);  //  Get  the  length of  returned  JSON Oblect-array;
+  var lengthR = Object.keys(respp.feed.entry).length;  alert("Number entries  => "+lengthR);  //  Get  the  length of  returned  JSON Oblect-array;  //was  just Object.keys(respp.feed).length;==12
                          
                               
                               //starting  "for()" loop  with  Json  response length;
                                var finalText="<img src='https://ca.xbrl.org/wp-content/uploads/sites/11/2016/08/DATA.jpg'/><table>"; 
-                         for (var i = 0; i < lengthR-4; i++) //!!!!
+                         for (var i = 0; i < lengthR; i++) //!!!! -4
                                             
                                             {
                                             var finalText= finalText+"<tr><td>"+respp.feed.entry[i]['gsx$_cn6ca']['$t'] +"</td><td> "+respp.feed.entry[i]['gsx$firstname']['$t']+ "</td></tr>" }
@@ -56,6 +56,11 @@ function getJson (){
 
 </body>
 </html>
+
+
+
+
+
 
 
 
