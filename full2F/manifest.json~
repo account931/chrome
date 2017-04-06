@@ -1,0 +1,29 @@
+﻿{
+ "name": "2Ffull", // Название расширения
+ "version": "2.0", // Номер версии
+ "manifest_version": 2, // Номер версии
+ "description": "Full version", // Описание расширения
+
+ "permissions": [
+  "tabs", // Разрешить расширению работать с вкладками
+  "storage",
+  "http://*/*", "https://*/*"
+ ],
+
+ "background": {
+	"scripts": ["background.js"]
+ },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"], //На всех страницах
+      "js": ["jquery.js","contentscript.js"], //Скрипт
+      "run_at": "document_end", //Когда запускать
+      "all_frames": false //Только на страницах - не в фреймах
+    }
+  ],
+ "browser_action": { // Элементы браузера
+  "default_title": "Waze counter", // Название кнопки
+  "default_icon": "images/waze-icon.png", // Иконка для кнопки
+  "default_popup": "popup.html" // Всплывающее окно
+ }
+}

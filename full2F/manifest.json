@@ -1,0 +1,50 @@
+﻿{
+ "name": "2Ffull", // extension name
+ "version": "2.0", // version
+ "manifest_version": 2, // manifest  version
+ "description": "Full version", // description 
+
+ "permissions": [
+   
+  "tabs", //allow  tabs
+  "storage",
+  
+    "http://*/*", "https://*/*","<all_urls>",
+"https://docs.google.com/",
+   "http://api.openweathermap.org/*" ,//mine
+   "http://api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=42b614437754a4ec7c704604e2a3f97f"
+
+ ],
+
+
+ "background": {
+	"scripts": ["background.js"]
+ },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"], //on all pages    //"js":["thirdParty/jquery.1.10.2.min.js", "script.js"],
+      "js": ["jquery.js","contentscript.js"], //Script
+      "js": ["jquery.js","popup.js"], //  
+      "js": ["thirdparty/jquery-1.12.0.min.js","popup.js"], //
+   
+      "run_at": "document_end", //when to  run
+      "all_frames": false //Только на страницах - не в фреймах
+    }
+  ],
+ "browser_action": { // Элементы браузера
+  "default_title": "2F", // Button tittle
+  "default_icon": "images/fff2.png", // Icon image  fff.png
+  "default_popup": "popup.html" // Всплывающее окно
+ },
+
+
+
+
+
+
+
+
+"content_security_policy":"script-src 'self' 'unsafe-eval' http://api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=42b614437754a4ec7c704604e2a3f97f; object-src 'self' "
+
+
+}

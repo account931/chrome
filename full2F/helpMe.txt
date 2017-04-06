@@ -1,0 +1,61 @@
+//execute 1 time only
+
+<script type="text/javascript">
+    var alerted = localStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+     alert("My alert.");
+     localStorage.setItem('alerted','yes');
+    }
+</script>
+
+
+
+//You can't "disable" a function, but you can set a variable that will force it to exit right away:
+ var stopMe = true
+ function myFunction() {
+   if(stopMe) {
+      return;
+   } 
+  ..
+ }
+
+
+
+
+//  Run  regarding  the  time 
+var mili = event.start.getTime() - now.getTime();
+if(mili < 1800000 && mili > 0){    
+$('.alert').dialog({ 
+        buttons: [{ 
+        text: "OK", 
+          click: function() { 
+            $( this ).dialog( "close" ); 
+          }
+        }]
+    });
+}
+
+
+
+
+//************************************************************************************************
+// my guess
+var t = new Date();
+var h=t.getHours();
+    var m=t.getMinutes();   var s = t.getSeconds();
+var  window.start=m//get Current  time ;// execute in checkAnyCountryIfScrolled()  body
+
+var now=actuall time // execute  whem movement  fired
+if(now-start>6000){
+checkAnyCountryIfScrolled("1");
+checkAnyCountryIfScrolled("2");
+}
+
+
+//****************************************************************888
+ // my guess  2
+var status=true;
+in CheckCountry{st=false;}
+on div  click =setTimeout(st=true, 1000)
+mouseTriggerd=if(st==true) {checkCountry}
+

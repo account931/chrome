@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<script type="text/javascript" src="popup.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<ul>
+                     <a hfer="http://ls.igniteso.com/"><li>LightSpeed</li></a>
+                     <li><a hfer="">Waze </a></li>
+                     <li><a hfer="https://mail.igniteoutsourcing.com/#1">Ign Mail</a></li>
+                     <li id="l" onclick="count();">Count Links</li>
+
+                </ul>
+	</body>
+</html>

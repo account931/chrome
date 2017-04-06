@@ -1,0 +1,92 @@
+<html>
+	<head>
+<!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'http://api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=42b614437754a4ec7c704604e2a3f97f ">-->
+		
+		<script type="text/javascript" src="jquery.js"></script>
+         <script type="text/javascript" src="thirdparty/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript" src="background.js"></script>
+       <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+
+
+<style>
+//body{overflow-y:auto;background-color:white;/* grey ;   #ffff00*/; /} 
+ul{list-style-type: none;}
+h1{font-size:14px;color:white;border:2px solid white; width:101%;}
+a,.l2 {font-size:14px;color:white;/*-webkit-text-stroke: 1px black;-webkit-text-fill-color: white;*/-webkit-transition: font-size  0s;transition: font-size 0.2s;} 
+a:hover{color:white; font-size:15px;font-weight:bold; -webkit-text-stroke: 1px white;} 
+.l2:hover {color:white; font-size:15px;font-weight:bold; -webkit-text-stroke: 1px white;pointer:cursor;}
+#l{font-size:14px;color:white;}
+li{margin-left:-29px;width:98%;border:1.5px solid white;padding:2px;margin-bottom:8px;border-radius:22px;background-color:grey;opacity:90%;-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);}
+
+.shadow{-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);}
+
+
+//body{
+background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 65%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 65%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+
+
+
+body {width:250px;background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); 
+}
+</style>
+
+	</head>
+	<body>
+            <center> 
+         <H1 class="shadow">Data provided</H1>
+		<ul>
+                         <a id="lSpeed" href="http://ls.igniteso.com/projects/wazeukraine/issues/7549/time_entries" ><li>LightSpeed</li></a>
+                     <li><a href="https://docs.google.com/forms/d/1xgozLfzfgmGI97TkVHkRNuIR_GrMqZG22S5zDT9yO28/viewform?entry.732072469=Kate&entry.1845541901=ign_dmitriy&entry.1076665963=Venues&entry.1765260159_hour=04&entry.1765260159_minute=30">Waze Mark ID V.31</a></li>
+<!--Working  variant  just  before  the form  changes  https://docs.google.com/forms/d/1VBX4Qb77mZ1YYo4wUz8G2WU088n3e3qAeafQ80d78-0/viewform?entry.1303096748=ign_dmitriy&entry.1475050839=Kate&entry.518668562=Venues&entry.1304524603_hour=04&entry.1304524603_minute=30-->
+<!--$['GET'] was  supposed  to  &entry.705601493_hour=09&entry.705601493_minute=00&entry.120447165_hour=13&entry.120447165_minute=00-->
+                     <!--<li><a href="https://www.waze.com">Waze </a></li>-->
+                     <li><a href="http://example2.esy.es/myWazeTime/index.php?user=ign_dmitriy">W_Mark ID Scripting V.4</a></li>
+                     <li><a href="http://example2.esy.es/myWazeTime/cut_release.php?user=ign_dmitriy">W_Mark ID Scripting Auth</a></li>
+                     <li><a href="https://mail.igniteoutsourcing.com/#1">Ign Mail</a></li>
+                     
+                     <li><a href="http://www.hostinger.com.ua/">Hosting Server</a></li>
+                     <li><a href="http://example2.esy.es/mvc">My  MVC</a></li>
+                     <!--<li><a href="http://www.tutorialspoint.com/android/">Android tutorial</a></li>-->
+                     <li><a href="http://www.yiiframework.com/doc/guide/1.1/en/basics.best-practices">Yii       tutorial</a></li>
+                     <li><a href="http://example2.esy.es/tr/display.php">Admin View</a></li>
+                     <li id="l" class="l2">Count Links</li>
+                     <li id="seconddd" class="l2">Create mail</li>
+                     <li id="getURL" class="l2">$GET['URL']=>MAPS</li>
+                     <li id="test" class="l2">Test_Erase</li>
+                     <li><a href="https://www.waze.com/ru/user/editor/ign_dmitriy">Stats</a></li>
+                     <li id="gMaps" class="l2">Google maps</li>
+                     <li id="counterPro" class="l2">CounterPro++</li>
+                     <li id="venuesScroll" class="l2">VenuesScroll</li>
+                     <li><a href="http://example2.esy.es/myWazeStat">Calc_Stat Api</a></li>
+                     <li><a href="http://waze.esy.es/yii2016/blog_mine/index.php/site/myDBStart">Yii1 Framework Stats</a></li>
+                     <li><a href="http://waze.esy.es/2">Yii2</a></li>
+                     <li><a href="http://example2.esy.es/myWazeCoords/">Split  Coordinates</a></li>
+                     <li id="secondSplit" class="l2">Split  Coords SCR</li>
+                     <li><a href="http://example2.esy.es/myWazeGeo_GoogleMaps">HardCore  Geo</a></li>
+                     <li><a href="http://example2.esy.es/myWaze_reroute/index.php">Re-route</a></li>
+                     <li><a href="http://example2.esy.es/myWazeHourRate/index.html">Hour  Rate</a></li>
+                     <li><a href="http://example2.esy.es/myWaze_unsorted/">Unsorted</a></li>
+
+
+                      
+
+
+
+                </ul>
+               
+               <!--<div id="weather"></div></br>-->
+               <div id="1"> <img id="imgL"  src="images/extenn.png" style="width:200px;" /></div>
+</center>
+	</body>
+</html>

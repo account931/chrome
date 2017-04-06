@@ -1,0 +1,6 @@
+//alert('Go');
+
+    $("#l").click(function(){
+      alert("There are" + $('a').length + " links on this  page ");
+    });
+

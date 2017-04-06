@@ -1,0 +1,30 @@
+//VERY LAST
+"content_security_policy": "script-src 'self' http://api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=42b614437754a4ec7c704604e2a3f97f; object-src 'self'"  ,
+
+
+
+
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"   //last  return comma  IF
+//VEY LAST
+
+
+
+
+"content_security_policy": "script-src 'self' http://api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=42b614437754a4ec7c704604e2a3f97f; object-src 'self'",
+
+
+
+//"content_security_policy": "default-src 'self'",
+
+
+"content_security_policy":"connect-src 
+            http://.fbcdn.net *.facebook.net .spotilocal.com: 
+            http://api.openweathermap.org:* 
+            http://api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=42b614437754a4ec7c704604e2a3f97f",
+
+
+
+"content_security_policy": "script-src 'self' http://api.openweathermap.org/ 'unsafe-inline'; object-src 'self'"
+
+
+"content_security_policy": "script-src 'self' http://api.openweathermap.org/*; object-src 'self'",  //  used  but  without*
