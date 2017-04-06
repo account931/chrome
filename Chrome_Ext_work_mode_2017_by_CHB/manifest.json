@@ -1,0 +1,50 @@
+﻿{
+ "name": "307_mode", // extension name
+ "version": "932", // version
+ "manifest_version": 2, // manifest  version
+ "description": "Limited_mode", // description 
+
+ "permissions": [
+   
+  "tabs", //allow  tabs
+  "storage",
+  
+    "http://*/*", "https://*/*","<all_urls>",
+"https://docs.google.com/",
+   "http://api.openweathermap.org/*" //mine
+   
+
+ ],
+
+
+ "background": {
+	"scripts": ["background.js"]
+ },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"], //on all pages    //"js":["thirdParty/jquery.1.10.2.min.js", "script.js"],
+      "js": ["jquery.js","contentscript.js"], //Script
+      "js": ["jquery.js","popup.js"], //  
+      "js": ["thirdparty/jquery-1.12.0.min.js","popup.js"], //
+   
+      "run_at": "document_end", //when to  run
+      "all_frames": false //Только на страницах - не в фреймах
+    }
+  ],
+ "browser_action": { // Элементы браузера
+  "default_title": "307 Limited", // Button tittle
+  "default_icon": "images/fff.png", // Icon image  fff.png
+  "default_popup": "popup.html" // Всплывающее окно
+ }
+
+
+
+
+
+
+
+
+
+
+
+}

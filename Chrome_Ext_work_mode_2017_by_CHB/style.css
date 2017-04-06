@@ -1,0 +1,95 @@
+
+body{
+	color: white;
+	width:250px;
+    background: -webkit-linear-gradient(bottom left, rgba(0,16,89,1) 0%, rgba(0,128,128,1) 60%, rgba(0,128,128,1) 100%);
+    background: -o-linear-gradient(bottom left, rgba(0,16,89,1) 0%, rgba(0,128,128,1) 60%, rgba(0,128,128,1) 100%);
+    background: linear-gradient(to top right, rgba(0,16,89,1) 0%, rgba(0,128,128,1) 60%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */ /* opera 11.10+ */ /* ie10+ */ /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#001059',GradientType=1 ); /* ie6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); 
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+h1{
+	background-color: #004B63;
+	border-radius: 2px;
+	font-size:22px;
+	color: white;
+	width: 100%;
+	padding: 7px 0 7px 0;
+	text-align: center;
+}
+li{
+	list-style: none;
+	margin-left:-35px;
+	width:95%;
+	border-bottom: 1px solid #003242;
+	padding: 7px 0 7px 40px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+li:last-child{border-bottom:none;}
+li:hover{ 
+	transition-duration: 0.6s;
+    background-color: #004B69;
+    border-radius: 2px;
+    border-bottom-color: transparent; 
+}
+li:first-child::before, li:nth-child(2)::before, li:nth-child(3)::before, li:nth-child(4)::before, li:nth-child(5)::before ,li:nth-child(6)::before,li:nth-child(7)::before{
+	background-size: 24px 24px;
+	box-shadow: 2px 2px 2px #004B63;
+	border-radius: 100%; 
+    position: absolute;
+    top: 80px;
+    width: 24px; 
+    height: 24px;
+    content:"";
+    background-repeat: no-repeat;
+    margin-right: 20px; 
+}
+li:first-child::before{
+	background-image: url('/icon/link.png');
+	left: 19px;
+	top: 80px;
+}
+li:nth-child(2)::before{
+	background-image: url('/icon/clock_.png');
+	left: 19px;
+	top: 125px;	  /*top: 125px;*/
+}
+li:nth-child(3)::before{
+	background-image: url('/icon/email.png');
+	left: 19px;
+	top: 171px;	
+}
+li:nth-child(4)::before{
+	background-image: url('/icon/shield.png');
+	left: 19px;
+	top: 219px;
+}
+li:nth-child(5)::before{
+	background-image: url('/icon/placeholder.png');
+	left: 19px;
+	top: 265px;}
+
+/*Gmaps*/
+li:nth-child(6)::before{
+	background-image: url('/icon/cursor.png');
+	left: 19px;
+	top: 310px;}
+
+/*Instant View*/
+li:nth-child(7)::before{
+	background-image: url('/icon/list.png');
+	left: 19px;
+	top: 355px;}
+
+
+/*li:nth-child(6):before{background-image: url('/icon/hourglass.png')}
+li:nth-child(7):before{}*/
+
+a ,#seconddd,#gMaps,#getURL{
+	color: white;
+	
+    text-decoration: none;
+    font-size: 20px;
+}

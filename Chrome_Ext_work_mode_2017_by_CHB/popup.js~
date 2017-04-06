@@ -1,0 +1,26 @@
+function clickHandler(e) {
+	// alert("asd");
+	chrome.extension.sendMessage({directive: "popup-click"}, function(response) {
+		this.close(); // close the popup when the background finishes processing request
+	});
+}
+
+count(){ alert("There are" + $('a').length + " links on this  page ");}
+//$(document).ready(function(){
+//
+
+alert('Go');
+
+    $("#l").click(function(){
+      alert("There are" + $('a').length + " links on this  page ");
+    });
+
+
+
+
+
+// END READY
+//});
+
+
+
